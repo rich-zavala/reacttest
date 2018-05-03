@@ -4,7 +4,6 @@ import ipservices from '../../services/ipservices';
 
 function renderRow() {
   let r = [];
-  console.log(ipservices());
   let ips = ipservices();
   for (let i in ips) {
     let obj = {
@@ -18,11 +17,8 @@ function renderRow() {
 
 export default function Tabla() {
   return (
-    <div>
-      <p>Is alive!</p>
-      <div className='tabla'>
-        {renderRow()}
-      </div>
-    </div>
+    <table>
+      {renderRow()}
+    </table>
   );
 }
